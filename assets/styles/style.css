@@ -1,0 +1,239 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#container {
+    display: flex; 
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+#map {
+    margin-left: 15%;
+    height: 600px;
+    width: 40%; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#avg-price-bar-chart {
+    margin-top: 100px;
+    width: 50%; 
+    height: 500px; 
+    
+}
+
+#district-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin: 0;
+    padding: 5px;
+    width: 20%;
+    background: none;
+}
+
+
+#district-filter-container label {
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+
+#distrito-filter {
+    padding: 4px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#generos-filter {
+    padding: 4px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.coordenadas-filter {
+    padding: 4px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#distrito-filter:focus {
+    border-color: #4A90E2; 
+}
+
+
+#opciones-filtrado {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 5px;
+    width: 70%;
+    background: none; 
+    justify-content: flex-start; 
+}
+
+#opciones-filtrado-2 {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 5px;
+    width: 70%;
+    background: none; 
+    justify-content: flex-start; 
+}
+
+#opciones-filtrado-3 {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 70%;
+    background: none; 
+    justify-content: flex-start; 
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    padding: 3px 6px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.legend-item:hover {
+    background-color: #e6e6e6;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+#back-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#back-button:hover {
+    background-color: #e6e6e6;
+}
+
+#back-button span {
+    margin-left: 5px;
+}
+
+#back-button.hidden {
+    display: none;
+}
+
+#description {
+    text-align: left;
+    width: 70%;
+    margin: 30px 0;
+    margin-bottom: 30px; 
+}
+
+#description h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+#description p {
+    margin: 5px 0;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #444;
+}
+
+#description span {
+    font-weight: bold;
+}
+
+.leaflet-container {
+    cursor: default !important;
+}
+
+.leaflet-interactive {
+    cursor: default !important;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.dot {
+    stroke-width: 1.5px;
+}
+
+.legend {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.button {
+    background-color: #6EC6E7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #355d75;
+    color: white;
+}
+.divider {
+    width: 60%;
+    border: none;
+    border-top: 1px solid rgba(75, 75, 75, 0.2); 
+    margin: 30px 0; 
+    margin-top: 50px;
+}
