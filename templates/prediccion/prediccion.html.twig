@@ -1,47 +1,50 @@
 {% extends 'base.html.twig' %}
 {% block head %}
-    {% block title %}Título{% endblock %}
-    {% block stylesheets %}
-        <link rel='stylesheet' href='https://unpkg.com/leaflet@1.4.0/dist/leaflet.css'>
-        <link rel="stylesheet" href="{{asset('styles/style.css')}}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-       
-    {% endblock %}
-    {% block javascripts %}
-        {#<script src="{{asset('js/leaflet.js')}}"></script>#}
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js'></script>
-        <script src = "{{asset('js/d3.v7.min.js')}}"></script>
-        <script src="{{asset('js/script.js')}}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    {% endblock %}
+
+  {% block title %}Título{% endblock %}
+
+  {% block stylesheets %}
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.4.0/dist/leaflet.css'>
+    <link rel="stylesheet" href="{{asset('styles/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  {% endblock %}
+
+  {% block javascripts %}
+    {#<script src="{{asset('js/leaflet.js')}}"></script>#}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js'></script>
+    <script src = "{{asset('js/d3.v7.min.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  {% endblock %}
+
 {% endblock %}
 
 {% block body %}
-    <div id="opciones-filtrado"></div>
+  <div id="opciones-filtrado"></div>
 <div id="opciones-filtrado-2">
-    <label for="generos-filter" class="legend-item">Filtrar por géneros:</label>
-    <select id="generos-filter">
-        <option class="district-option">Todos</option>
-        <option class="district-option">Apis</option>
-        <option class="district-option">Bombus</option>
-        <option class="district-option">Melipona</option>
-        <option class="district-option">Trigona</option>
-        <option class="district-option">Euglossa</option>
-    </select>
+  <label for="generos-filter" class="legend-item">Filtrar por géneros:</label>
+  <select id="generos-filter">
+    <option class="district-option">Todos</option>
+    <option class="district-option">Apis</option>
+    <option class="district-option">Bombus</option>
+    <option class="district-option">Melipona</option>
+    <option class="district-option">Trigona</option>
+    <option class="district-option">Euglossa</option>
+  </select>
 </div>
 <div id="opciones-filtrado-3">
-    <label for="latitud-filter" class="legend-item">Latitud:</label>
-    <input type="text" id="latitud-filter" name="latitud-name" class="coordenadas-filter"/>
-    <label for="longitud-filter" class="legend-item">Longitud:</label>
-    <input type="text" id="longitud-filter" name="longitud-name" class="coordenadas-filter"/>
+  <label for="latitud-filter" class="legend-item">Latitud:</label>
+  <input type="text" id="latitud-filter" name="latitud-name" class="coordenadas-filter"/>
+  <label for="longitud-filter" class="legend-item">Longitud:</label>
+  <input type="text" id="longitud-filter" name="longitud-name" class="coordenadas-filter"/>
 </div>
 
 <div id="opciones-filtrado-3">
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Predecir
-</button>
+  </button>
 </div>
 
  <!-- Modal -->
@@ -67,8 +70,8 @@
     </div>
   </div>
 
-    <div id="container">
-        <div id="map"></div>
-        <div id="avg-price-bar-chart"></div>
-    </div>
+<div id="container">
+    <div id="map"></div>
+    <div id="avg-price-bar-chart"></div>
+</div>
 {% endblock %}
