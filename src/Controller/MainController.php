@@ -23,6 +23,6 @@ class MainController extends AbstractController
     #[Route('/' , name: 'app_index')]
     public function registro(): Response
     {
-        return $this->redirectToRoute('app_register');
+        return $this->redirectToRoute('app_login');
     }
 }

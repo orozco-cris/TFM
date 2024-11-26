@@ -1,24 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Registro de usuario{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('styles/login.css')}}">       
+{% endblock %}
 
 {% block body %}
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-offset-5 col-md-10 ">
+            <div class="form-login">
+                <h4>Registro de usuario</h4>
+                {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm) }}
 
-    {{ form_errors(registrationForm) }}
+                    {{ form_row(registrationForm.email) }}
+                    </br>
+                    {{ form_row(registrationForm.plainPassword) }}
+                    </br>
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    </br>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.nombreUser) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+                    <div class="wrapper">
+                    <a class="btn btn-secondary btn-md" href="{{ path('app_login') }}" role="button">
+                        Inicio de sesión <i class="fa fa-sign-in"></i></a>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-md">
+                        Guardar<i class="fa fa-user"></i></a>
+                    </button>
+                    </div>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
 {% endblock %}
