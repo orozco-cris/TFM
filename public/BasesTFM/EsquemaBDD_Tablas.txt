@@ -1,0 +1,18 @@
+CREATE DATABASE PREDICTORNICHOS;
+
+CREATE TABLE INFORMACIONABEJAS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Familia VARCHAR(255),
+    Genero VARCHAR(255),
+    Especie VARCHAR(255),
+    Pais VARCHAR(255),
+    Provincia VARCHAR(255),
+    Canton VARCHAR(255),
+    Localidad VARCHAR(255),
+    Latitud DOUBLE,
+    Longitud DOUBLE,
+    Altitud INT,
+    FechaLevantamiento DATE,
+    Estado INT,
+    Usuario VARCHAR(255)
+);
